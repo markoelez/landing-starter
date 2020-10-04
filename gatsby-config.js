@@ -6,6 +6,7 @@ module.exports = {
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
+    `gatsby-plugin-styled-components`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -25,6 +26,25 @@ module.exports = {
         theme_color: `#663399`,
         display: `minimal-ui`,
         icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
+      },
+    },
+    {
+      resolve: 'gatsby-plugin-module-resolver',
+      options: {
+        root: './src', // <- will be used as a root dir
+        aliases: {
+          '@components': './components',
+          '@shared': './shared',
+          '@screens': './screens',
+          '@styles': './shared/utils/styles',
+          '@constants': './shared/utils/constants',
+          '@images': './images',
+          helpers: './helpers', // <- will become ./src/helpers
+          static: {
+            root: './public', // <- will used as this alias' root dir
+            alias: './static', // <- will become ./public/static
+          },
+        },
       },
     },
     // this (optional) plugin enables Progressive Web App + Offline functionality

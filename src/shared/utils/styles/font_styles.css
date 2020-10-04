@@ -1,0 +1,34 @@
+@font-face {
+  font-family: 'F37 Ginger';
+  font-weight: 200;
+  src: local('F37_Ginger'),
+    url(/fonts/ginger/F37_Ginger_Pro_Light.otf) format('opentype');
+}
+
+@font-face {
+  font-family: 'F37 Ginger';
+  font-weight: 400;
+  src: local('F37_Ginger'),
+    url(/fonts/ginger/F37_Ginger_Pro_Regular.otf) format('opentype');
+}
+
+@font-face {
+  font-family: 'F37 Ginger';
+  font-weight: 500;
+  src: local('F37_Ginger'),
+    url(/fonts/ginger/F37_Ginger_Pro_Demi.otf) format('opentype');
+}
+
+@font-face {
+  font-family: 'F37 Ginger';
+  font-weight: 700;
+  src: local('F37_Ginger'),
+    url(/fonts/ginger/F37_Ginger_Pro_Bold.otf) format('opentype');
+}
+
+@font-face {
+  font-family: 'F37 Ginger';
+  font-weight: 800;
+  src: local('F37_Ginger'),
+    url(/fonts/ginger/F37_Ginger_Pro_Black.otf) format('opentype');
+}
