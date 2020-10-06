@@ -20,15 +20,16 @@ const Home = () => {
     <Fragment>
       <Nav
         items={NAV_ITEMS}
-        brandText="BLUE ORIGIN"
+        brandText="Company"
         position="fixed"
         background="transparent"
         scrolledBackground={color.primary}
-        textColor="#000"
+        textColor="#191a1b"
         scrolledTextColor="#fff"
         textColorHover="#222"
         scrolledLogoColor="#fff"
-        logoColor="#000"
+        logoColor="#fe5e5f"
+        logoTextColor="#000"
         borderType="none"
         buttonVariant="primary"
         buttonTextColor={color.primary}
@@ -40,8 +41,8 @@ const Home = () => {
             href="https://app.unimetrics.io"
             icon="arrow-right"
             iconPos="after"
-            variant="light"
-            background="#000"
+            variant="dark"
+            background="#516cf0"
             color="#fff"
           >
             Get Started

@@ -7,16 +7,9 @@ import Icon from '@shared/components/icon'
 import { StyledButton, StyledSpinner, Text } from './styles'
 
 const propTypes = {
-  colorVariant: PropTypes.oneOf(['light', 'dark']),
+  variant: PropTypes.oneOf(['light', 'dark']),
   className: PropTypes.string,
   children: PropTypes.node,
-  variant: PropTypes.oneOf([
-    'primary',
-    'success',
-    'danger',
-    'secondary',
-    'empty',
-  ]),
   icon: PropTypes.oneOfType([PropTypes.string, PropTypes.node]),
   iconPos: PropTypes.oneOf(['before', 'after']),
   iconSize: PropTypes.number,
@@ -28,10 +21,9 @@ const propTypes = {
 }
 
 const defaultProps = {
-  colorVariant: 'light',
+  variant: 'light',
   className: undefined,
   children: undefined,
-  variant: 'secondary',
   iconPos: 'before',
   icon: undefined,
   iconSize: 18,
@@ -46,7 +38,6 @@ const Button = forwardRef(
   (
     {
       children,
-      colorVariant,
       variant,
       icon,
       iconSize,
@@ -70,7 +61,6 @@ const Button = forwardRef(
       <StyledButton
         {...buttonProps}
         onClick={handleClick}
-        colorVariant={colorVariant}
         variant={variant}
         disabled={disabled || isWorking}
         isWorking={isWorking}

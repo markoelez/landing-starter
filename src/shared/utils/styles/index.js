@@ -5,7 +5,7 @@ import Color from 'color'
 
 export const color = {
   //primary: '#0542d6',
-  primary: '#0542d6',
+  primary: '#516cf0',
   secondary: '#5569d4',
   success: '#0B875B',
   danger: '#E13C3C',
@@ -26,7 +26,7 @@ export const color = {
   textLight: '#000',
   textLightSecondary: '#989899',
   textLightTertiary: '#5a5a5e',
-  textLink: '#000',
+  textLink: '#516cf0"',
 
   backgroundDarkPrimary: '#0542d6',
   backgroundDarkSecondary: '#1c1d1f',

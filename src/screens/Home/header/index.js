@@ -1,6 +1,6 @@
 import React from 'react'
 import { graphql, useStaticQuery, Link } from 'gatsby'
-import { Button } from '@shared/components'
+import { Button, Input } from '@shared/components'
 import { color } from '@styles'
 import {
   HeaderWrapper,
@@ -10,7 +10,7 @@ import {
   Container,
   FormSubtitleLink,
   HeaderForm,
-  HeaderInput,
+  InputWrapper,
   HeaderButton,
   FormSubtitle,
   ImageWrapper,
@@ -49,12 +49,14 @@ const Header = () => {
               until you’re hired.
             </h2>
             <HeaderForm onSubmit={handleSubmit}>
-              <HeaderInput placeholder="Your email" />
+              <InputWrapper>
+                <Input placeholder="Your email" />
+              </InputWrapper>
               <Button
                 href="https://app.unimetrics.io"
-                variant="button"
-                background="#fff"
-                color={color.primary}
+                variant="dark"
+                background="#516cf0"
+                color="#fff"
               >
                 Get Started
               </Button>

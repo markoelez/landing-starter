@@ -43,6 +43,7 @@ const propTypes = {
   background: PropTypes.string,
   scrolledBackground: PropTypes.string,
   logoColor: PropTypes.string,
+  logoTextColor: PropTypes.string,
   position: PropTypes.oneOf(['fixed', 'absolute', 'relative']),
   borderType: PropTypes.oneOf(['dark', 'light', 'none']),
   route: PropTypes.string,
@@ -60,7 +61,8 @@ const defaultProps = {
   buttonTextColor: '#fff',
   background: '#fff',
   scrolledBackground: '#fff',
-  logoColor: 'primary',
+  logoColor: '#000',
+  logoTextColor: '#000',
   borderType: 'light',
   route: NavRoutes.HOME,
   renderLogo: undefined,
@@ -85,6 +87,7 @@ const Nav = ({
   scrolledBackground,
   scrolledLogoColor,
   logoColor,
+  logoTextColor,
   borderType,
   buttonVariant,
   position,
@@ -141,7 +144,7 @@ const Nav = ({
               {brandText && (
                 <Link to="/">
                   <CompanyName
-                    color={logoColor}
+                    color={logoTextColor}
                     scrolledColor={scrolledLogoColor}
                     scrolled={hasScrolled}
                   >

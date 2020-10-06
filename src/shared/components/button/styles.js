@@ -24,9 +24,9 @@ export const StyledButton = styled.a`
 
   background: ${(props) => props.background};
   color: ${(props) => props.color};
-  ${mixin.clickable}
 
-  ${(props) => colorVariants[props.colorVariant]};
+  ${(props) => colorVariants[props.variant]};
+  ${mixin.clickable}
 `
 
 const light = css`
@@ -84,42 +84,6 @@ const colored = css`
       `}
   }
 `
-
-const secondaryAndEmptyShared = css`
-  color: ${color.textDark};
-  ${font.regular}
-  &:not(:disabled) {
-    &:hover {
-      background: ${color.backgroundLight};
-    }
-    &:active {
-      color: ${color.primary};
-      background: ${color.backgroundLightPrimary};
-    }
-    ${(props) =>
-      props.isActive &&
-      css`
-        color: ${color.primary};
-        background: ${color.backgroundLightPrimary} !important;
-      `}
-  }
-`
-
-const buttonVariants = {
-  primary: colored,
-  link: colored,
-  button: colored,
-  success: colored,
-  danger: colored,
-  secondary: css`
-    background: ${color.secondary};
-    ${secondaryAndEmptyShared};
-  `,
-  empty: css`
-    background: #fff;
-    ${secondaryAndEmptyShared};
-  `,
-}
 
 export const StyledSpinner = styled(Spinner)`
   position: relative;

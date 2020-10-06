@@ -20,11 +20,7 @@ const Footer = () => (
       <FooterColumn>
         <LogoWrapper>
           <Link to="/">
-            <Logo
-              icon={COMPANY_LOGO_NAME}
-              color={color.primary}
-              disableFill={true}
-            />
+            <Logo icon={COMPANY_LOGO_NAME} color="#000" disableFill={true} />
           </Link>
         </LogoWrapper>
       </FooterColumn>

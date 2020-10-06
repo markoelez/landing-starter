@@ -103,7 +103,8 @@ export const HeaderForm = styled.form`
     display: flex;
     flex-direction: row;
     align-items: center;
-    padding-bottom: 0;
+    justify-content: center;
+    padding-bottom: 12px;
   }
   padding-bottom: 20px;
 `
@@ -118,43 +119,18 @@ export const FormSubtitle = styled.span`
 `
 
 export const FormSubtitleLink = styled(Link)`
-  color: ${color.textLight};
+  color: ${color.textLink};
   padding-bottom: 1px;
   margin-left: 8px;
   text-decoration: none;
-  border-bottom: 1px solid #fff;
+  border-bottom: 1px solid ${color.textLink};
 `
 
-export const HeaderInput = styled.input`
-  display: block;
-  height: 50px;
+export const InputWrapper = styled.div`
+  display: flex;
   width: 100%;
-  padding: 8px 16px;
-  &:focus {
-    background: ${mixin.darken(color.inputBackground, 0.1)};
-    inset: none;
-  }
-  &:hover:not(:focus) {
-    background: ${mixin.darken(color.inputBackground, 0.1)};
-  }
-  margin-bottom: 8px;
-  border: none;
-  width: 100%;
-
-  margin-right: 30px;
-
-  background: ${color.inputBackground};
-  color: #000;
-
-  border: none;
-  outline: none;
-
-  border-radius: 3px;
-  border-image: initial;
-
-  text-align: left;
-  ${font.regular};
-  ${font.size(16)};
+  height: 100%;
+  margin-right: 20px;
 `
 
 export const HeaderButton = styled.button`
