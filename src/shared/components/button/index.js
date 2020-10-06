@@ -7,6 +7,7 @@ import Icon from '@shared/components/icon'
 import { StyledButton, StyledSpinner, Text } from './styles'
 
 const propTypes = {
+  colorVariant: PropTypes.oneOf(['light', 'dark']),
   className: PropTypes.string,
   children: PropTypes.node,
   variant: PropTypes.oneOf([
@@ -27,6 +28,7 @@ const propTypes = {
 }
 
 const defaultProps = {
+  colorVariant: 'light',
   className: undefined,
   children: undefined,
   variant: 'secondary',
@@ -44,6 +46,7 @@ const Button = forwardRef(
   (
     {
       children,
+      colorVariant,
       variant,
       icon,
       iconSize,
@@ -67,6 +70,7 @@ const Button = forwardRef(
       <StyledButton
         {...buttonProps}
         onClick={handleClick}
+        colorVariant={colorVariant}
         variant={variant}
         disabled={disabled || isWorking}
         isWorking={isWorking}

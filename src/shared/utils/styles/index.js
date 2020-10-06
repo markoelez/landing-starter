@@ -4,6 +4,7 @@ import { css } from 'styled-components'
 import Color from 'color'
 
 export const color = {
+  //primary: '#0542d6',
   primary: '#0542d6',
   secondary: '#5569d4',
   success: '#0B875B',
@@ -20,10 +21,12 @@ export const color = {
   textDark: '#42526E',
   textMedium: '#5E6C84',
 
-  textLight: '#fff',
+  inputBackground: '#efeef3',
+
+  textLight: '#000',
   textLightSecondary: '#989899',
   textLightTertiary: '#5a5a5e',
-  textLink: '#0052cc',
+  textLink: '#000',
 
   backgroundDarkPrimary: '#0542d6',
   backgroundDarkSecondary: '#1c1d1f',

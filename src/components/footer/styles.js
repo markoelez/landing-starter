@@ -33,6 +33,8 @@ const Container = styled.div`
 export const FooterWrapper = styled.footer`
   border-top: 1px solid rgb(241, 241, 241);
   padding: 50px 0 80px;
+
+  color: #000;
 `
 
 export const BrandContainer = styled(Container)`
@@ -54,13 +56,11 @@ export const FooterColumn = styled.div`
   span {
     ${font.size(16)};
     ${font.bold};
-    color: ${color.primary};
   }
   ul {
     list-style: none;
     margin: 16px 0;
     padding: 0;
-    color: ${color.primary};
     li {
       margin-bottom: 12px;
       ${font.size(15)};

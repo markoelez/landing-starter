@@ -1,11 +1,12 @@
 import React, { Fragment } from 'react'
-import { Link } from 'gatsby'
 
-import Layout from '@components/layout'
-import Image from '@components/image'
+import { NavRoutes } from '@shared/utils/constants/nav_routes'
+import Nav from '@components/nav'
+import { color } from '@styles'
+
 import SEO from '@components/seo'
 
-import Home from '@screens/Home'
+import Home from '@screens/home'
 import Footer from '@components/footer'
 
 // Base styles

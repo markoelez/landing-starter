@@ -40,14 +40,14 @@ export const HeaderWrapper = styled.header`
   justify-content: flex-start;
   align-items: center;
 
-  background: ${color.primary};
+  background: #fff;
 
   width: 100%;
 
-  padding: 200px 0 200px 0;
+  padding: 200px 0 100px 0;
 
   position: relative;
-  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 calc(100% - 5vw));
+  //clip-path: polygon(0 0, 100% 0, 100% 100%, 0 calc(100% - 5vw));
 `
 export const Subtitle = styled.h5`
   font-size: 16px;
@@ -68,14 +68,14 @@ export const HeaderTextGroup = styled.div`
   }
 
   h1 {
-    color: #fff;
+    color: ${color.textLight};
     margin: 0 0 24px;
     ${font.size(36)};
   }
 
   h2 {
     line-height: 30px;
-    color: #fff;
+    color: ${color.textLight};
     margin-bottom: 24px;
     ${font.size(22)};
     ${font.regular};
@@ -103,16 +103,22 @@ export const HeaderForm = styled.form`
     display: flex;
     flex-direction: row;
     align-items: center;
+    padding-bottom: 0;
   }
+  padding-bottom: 20px;
 `
 
 export const FormSubtitle = styled.span`
-  color: #fff;
+  color: ${color.textLight};
   ${font.size(15)};
+  margin: 20px 0;
+  @media ${device.laptop} {
+    padding: 0;
+  }
 `
 
 export const FormSubtitleLink = styled(Link)`
-  color: #fff;
+  color: ${color.textLight};
   padding-bottom: 1px;
   margin-left: 8px;
   text-decoration: none;
@@ -125,11 +131,11 @@ export const HeaderInput = styled.input`
   width: 100%;
   padding: 8px 16px;
   &:focus {
-    background: ${mixin.darken('#fff', 0.1)};
+    background: ${mixin.darken(color.inputBackground, 0.1)};
     inset: none;
   }
   &:hover:not(:focus) {
-    background: ${mixin.darken('#fff', 0.1)};
+    background: ${mixin.darken(color.inputBackground, 0.1)};
   }
   margin-bottom: 8px;
   border: none;
@@ -137,12 +143,14 @@ export const HeaderInput = styled.input`
 
   margin-right: 30px;
 
-  background: ${color.formInputBackground};
+  background: ${color.inputBackground};
   color: #000;
+
+  border: none;
+  outline: none;
 
   border-radius: 3px;
   border-image: initial;
-  outline: 0px;
 
   text-align: left;
   ${font.regular};
@@ -175,9 +183,9 @@ export const HeaderButton = styled.button`
   }
 `
 export const ImageWrapper = styled.div`
-  justify-self: end;
-  align-self: center;
+  display: none;
   @media ${device.laptop} {
+    display: flex;
     justify-self: center;
   }
 `

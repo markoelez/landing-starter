@@ -7,24 +7,64 @@ export const StyledButton = styled.a`
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  height: 37px;
+  height: 45px;
   vertical-align: middle;
   line-height: 1;
-  padding: 0 ${(props) => (props.iconOnly ? 9 : 15)}px;
+  padding: 0 ${(props) => (props.iconOnly ? 9 : 16)}px;
   white-space: nowrap;
   border-radius: 3px;
   transition: all 0.1s;
   appearance: none;
-  ${mixin.clickable}
-  ${font.size(14.5)}
-  ${(props) => buttonVariants[props.variant]};
-  background: ${(props) => props.background};
-  color: ${(props) => props.color};
   &:disabled {
     opacity: 0.6;
     cursor: default;
   }
+  ${font.medium}
+  ${font.size(14.5)}
+
+  background: ${(props) => props.background};
+  color: ${(props) => props.color};
+  ${mixin.clickable}
+
+  ${(props) => colorVariants[props.colorVariant]};
 `
+
+const light = css`
+  &:not(:disabled) {
+    &:hover {
+      background: ${(props) => mixin.darken(props.background, 0.15)};
+    }
+    &:active {
+      background: ${(props) => mixin.darken(props.background, 0.1)};
+    }
+    ${(props) =>
+      props.isActive &&
+      css`
+        background: ${mixin.darken(props.background, 0.1)} !important;
+      `}
+  }
+`
+
+const dark = css`
+  &:not(:disabled) {
+    &:hover {
+      background: ${(props) => mixin.lighten(props.background, 0.15)};
+    }
+    &:active {
+      background: ${(props) => mixin.lighten(props.background, 0.1)};
+    }
+    ${(props) =>
+      props.isActive &&
+      css`
+        background: ${mixin.lighten(props.background, 0.1)} !important;
+      `}
+  }
+`
+
+const colorVariants = {
+  light: light,
+  dark: dark,
+}
 
 const colored = css`
   color: #fff;
@@ -87,6 +127,6 @@ export const StyledSpinner = styled(Spinner)`
 `
 
 export const Text = styled.div`
-  padding-left: ${(props) => (props.withPadding ? 7 : 0)}px;
-  padding-right: ${(props) => (props.withPadding ? 7 : 0)}px;
+  padding-left: ${(props) => (props.withPadding ? 8 : 0)}px;
+  padding-right: ${(props) => (props.withPadding ? 8 : 0)}px;
 `

@@ -35,7 +35,7 @@ const Header = () => {
   }
 
   return (
-    <HeaderWrapper id="top">
+    <HeaderWrapper>
       <Container>
         <Flex>
           <HeaderTextGroup>
