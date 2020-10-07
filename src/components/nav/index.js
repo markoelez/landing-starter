@@ -30,6 +30,10 @@ import {
 } from './styles'
 
 const propTypes = {
+  scrolledMobileToggleColor: PropTypes.string,
+  mobileTextColor: PropTypes.string,
+  mobileToggleColor: PropTypes.string,
+  mobileBackground: PropTypes.string,
   items: PropTypes.list,
   renderLogo: PropTypes.func,
   renderScrolledButton: PropTypes.func,
@@ -50,6 +54,10 @@ const propTypes = {
 }
 
 const defaultProps = {
+  scrolledMobileToggleColor: '#000',
+  mobileTextColor: '#000',
+  mobileToggleColor: '#000',
+  mobileBackground: '#fff',
   items: undefined,
   brandText: undefined,
   scrolledTextColor: '#000',
@@ -71,6 +79,9 @@ const defaultProps = {
 }
 
 const Nav = ({
+  mobileTextColor,
+  mobileToggleColor,
+  mobileBackground,
   brandText,
   items,
   route,
@@ -91,6 +102,7 @@ const Nav = ({
   borderType,
   buttonVariant,
   position,
+  scrolledMobileToggleColor,
 }) => {
   const variants = {
     open: { opacity: 1, x: 0 },
@@ -183,7 +195,9 @@ const Nav = ({
                 toggled={mobileMenuOpen}
                 toggle={toggleMobileMenu}
                 size={25}
-                color={logoColor}
+                color={
+                  hasScrolled ? scrolledMobileToggleColor : mobileToggleColor
+                }
               />
             </Mobile>
           </ActionsSection>
@@ -191,8 +205,8 @@ const Nav = ({
       </StyledNav>
 
       <MobileMenu
-        color={textColor}
-        background={background}
+        color={mobileTextColor}
+        background={mobileBackground}
         animate={mobileMenuOpen ? 'open' : 'closed'}
         variants={variants}
       >

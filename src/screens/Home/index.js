@@ -22,6 +22,10 @@ const Home = () => {
         items={NAV_ITEMS}
         brandText="Company"
         position="fixed"
+        mobileTextColor="#fff"
+        mobileToggleColor="#000"
+        scrolledMobileToggleColor="#fff"
+        mobileBackground={color.primary}
         background="transparent"
         scrolledBackground={color.primary}
         textColor="#191a1b"
