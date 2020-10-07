@@ -11,7 +11,6 @@ import Header from './header'
 import Companies from './companies'
 import Features from './features'
 
-import { Page } from './styles'
 
 const Home = () => {
   const NAV_ITEMS = ['our mission', 'solutions', 'learn', 'pricing']

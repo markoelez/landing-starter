@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import { font, color, device } from '@styles'
+import { font,  device } from '@styles'
 
 export const SectionTitle = styled.h3`
   background: #eff1f9;

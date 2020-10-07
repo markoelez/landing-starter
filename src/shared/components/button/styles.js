@@ -1,6 +1,6 @@
 import styled, { css } from 'styled-components'
 
-import { color, font, mixin } from '@styles'
+import { font, mixin } from '@styles'
 import Spinner from '@shared/components/spinner'
 
 export const StyledButton = styled.a`
@@ -65,25 +65,6 @@ const colorVariants = {
   light: light,
   dark: dark,
 }
-
-const colored = css`
-  color: #fff;
-  background: ${(props) => color[props.variant]};
-  ${font.medium}
-  &:not(:disabled) {
-    &:hover {
-      background: ${(props) => mixin.lighten(props.background, 0.15)};
-    }
-    &:active {
-      background: ${(props) => mixin.darken(props.background, 0.1)};
-    }
-    ${(props) =>
-      props.isActive &&
-      css`
-        background: ${mixin.darken(props.background, 0.1)} !important;
-      `}
-  }
-`
 
 export const StyledSpinner = styled(Spinner)`
   position: relative;

@@ -1,20 +1,13 @@
 import React, { Fragment, useState, useEffect } from 'react'
 import PropTypes from 'prop-types'
 
-import Icon from '@shared/components/icon'
 import Hamburger from 'hamburger-react'
-import AnchorLink from 'react-anchor-link-smooth-scroll'
 import Scrollspy from 'react-scrollspy'
-import { Menu, X } from 'react-feather'
 
-import { Button } from '@shared/components'
 import { NavRoutes } from '@shared/utils/constants/nav_routes'
-import { color } from '@styles'
-
 import { Link } from 'gatsby'
 
 import {
-  MobileActions,
   StyledNav,
   MobileLinkItem,
   Content,
@@ -22,7 +15,6 @@ import {
   ActionsSection,
   Mobile,
   MobileMenu,
-  MenuToggle,
   LogoWrapper,
   CompanyName,
   LinkItem,

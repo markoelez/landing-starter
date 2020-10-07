@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import { mixin, color, font, device } from '@styles'
+import { mixin, font, device } from '@styles'
 
 const Container = styled.div`
   max-width: 1200px;
@@ -37,15 +37,6 @@ export const FooterWrapper = styled.footer`
   color: #000;
 `
 
-export const BrandContainer = styled(Container)`
-  position: relative;
-  padding-top: 30px;
-  display: flex;
-  align-items: flex-end;
-
-  @media ${device.mobileL} {
-  }
-`
 export const FooterColumnContainer = styled(Container)`
   display: grid;
   grid-template-columns: repeat(4, 1fr);

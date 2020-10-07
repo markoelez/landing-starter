@@ -1,17 +1,14 @@
 import React from 'react'
-import { graphql, useStaticQuery, Link } from 'gatsby'
+import { graphql, useStaticQuery } from 'gatsby'
 import { Button, Input } from '@shared/components'
-import { color } from '@styles'
 import {
   HeaderWrapper,
   Flex,
   HeaderTextGroup,
-  Subtitle,
   Container,
   FormSubtitleLink,
   HeaderForm,
   InputWrapper,
-  HeaderButton,
   FormSubtitle,
   ImageWrapper,
   StyledImage,

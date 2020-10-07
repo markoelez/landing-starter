@@ -1,4 +1,4 @@
-import styled, { css } from 'styled-components'
+import styled from 'styled-components'
 
 import { mixin, color, font } from '@styles'
 import Icon from '@shared/components/icon'

@@ -26,7 +26,7 @@ export const color = {
   textLight: '#000',
   textLightSecondary: '#989899',
   textLightTertiary: '#5a5a5e',
-  textLink: '#516cf0"',
+  textLink: '#516cf0',
 
   backgroundDarkPrimary: '#0542d6',
   backgroundDarkSecondary: '#1c1d1f',

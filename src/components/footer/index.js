@@ -2,13 +2,11 @@ import React from 'react'
 
 import Logo from '@components/logo'
 
-import { color } from '@styles'
 import { COMPANY_LOGO_NAME } from '@constants/styles'
 import {
   FooterColumn,
   LogoWrapper,
   FooterColumnContainer,
-  BrandContainer,
   FooterWrapper,
 } from './styles'
 

@@ -1,6 +1,6 @@
 import React from 'react'
 import { Section, Container } from '@components/global'
-import { Subtitle, SectionTitle, Grid, Company } from './styles'
+import { Subtitle, Grid, Company } from './styles'
 import atlassian from '@images/atlassian.svg'
 
 const Companies = () => {
